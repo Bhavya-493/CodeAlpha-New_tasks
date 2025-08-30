@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <noscript><style>.requires-js{display:none!important}</style></noscript>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Image Gallery</h1>
+        <p class="subtitle">Hover, filter, and view in a lightbox</p>
+    </header>
+
+    <main>
+        <section class="controls" aria-label="Gallery filters">
+            <div class="filters" role="tablist" aria-label="Image categories">
+                <button class="filter-button active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="filter-button" data-filter="nature" role="tab" aria-selected="false">Nature</button>
+                <button class="filter-button" data-filter="city" role="tab" aria-selected="false">City</button>
+                <button class="filter-button" data-filter="people" role="tab" aria-selected="false">People</button>
+                <button class="filter-button" data-filter="abstract" role="tab" aria-selected="false">Abstract</button>
+            </div>
+        </section>
+
+        <section class="gallery" aria-label="Image gallery" id="gallery">
+            <figure class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Forest in morning light">
+                <figcaption>Forest in morning light</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop" alt="City skyline at dusk">
+                <figcaption>City skyline at dusk</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="people">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop" alt="Portrait of a smiling person">
+                <figcaption>Portrait of a smiling person</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="abstract">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Abstract colorful shapes">
+                <figcaption>Abstract colorful shapes</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop" alt="Mountain range under clouds">
+                <figcaption>Mountain range under clouds</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="Street at night with neon lights">
+                <figcaption>Street at night with neon lights</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="people">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" alt="Person in colorful outfit">
+                <figcaption>Person in colorful outfit</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="abstract">
+                <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop" alt="Geometric architecture pattern">
+                <figcaption>Geometric architecture pattern</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop" alt="Calm lake and trees">
+                <figcaption>Calm lake and trees</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1200&auto=format&fit=crop" alt="Modern bridge perspective">
+                <figcaption>Modern bridge perspective</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="people">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop" alt="Group of friends laughing">
+                <figcaption>Group of friends laughing</figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="abstract">
+                <img src="https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?q=80&w=1200&auto=format&fit=crop" alt="Colorful paint swirl">
+                <figcaption>Colorful paint swirl</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <div class="lightbox requires-js" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+        <div class="lightbox-backdrop" data-close></div>
+        <div class="lightbox-content" role="document">
+            <button class="lightbox-close" id="lbClose" aria-label="Close (Esc)">
+                &times;
+            </button>
+            <button class="lightbox-nav prev" id="lbPrev" aria-label="Previous (Left Arrow)">
+                &#10094;
+            </button>
+            <img class="lightbox-image" id="lbImage" alt="">
+            <figcaption class="lightbox-caption" id="lbCaption"></figcaption>
+            <button class="lightbox-nav next" id="lbNext" aria-label="Next (Right Arrow)">
+                &#10095;
+            </button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
