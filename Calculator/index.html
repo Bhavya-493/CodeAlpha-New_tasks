@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pro Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" role="application" aria-label="Calculator">
+    <div class="header">
+      <div class="brand">Calculator</div>
+      <div class="pill">Pro • Keyboard Ready</div>
+    </div>
+
+    <div class="display" aria-live="polite">
+      <div class="history" id="history">&nbsp;</div>
+      <div class="result" id="display">0</div>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="key danger" data-action="clear" aria-label="All Clear">AC</button>
+      <button class="key" data-action="delete" aria-label="Delete">DEL</button>
+      <button class="key op" data-op="%" aria-label="Percent">%</button>
+      <button class="key op" data-op="/" aria-label="Divide">÷</button>
+
+      <button class="key" data-num="7">7</button>
+      <button class="key" data-num="8">8</button>
+      <button class="key" data-num="9">9</button>
+      <button class="key op" data-op="*" aria-label="Multiply">×</button>
+
+      <button class="key" data-num="4">4</button>
+      <button class="key" data-num="5">5</button>
+      <button class="key" data-num="6">6</button>
+      <button class="key op" data-op="-" aria-label="Minus">−</button>
+
+      <button class="key" data-num="1">1</button>
+      <button class="key" data-num="2">2</button>
+      <button class="key" data-num="3">3</button>
+      <button class="key op" data-op="+" aria-label="Plus">+</button>
+
+      <button class="key span-2" data-num="0">0</button>
+      <button class="key" data-action="dot">.</button>
+      <button class="key equal" data-action="equals" aria-label="Equals">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
