@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeTunes Lite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎶 VibeTunes Lite</h1>
+  </header>
+
+  <main>
+    <div class="player">
+      <img id="cover" src="covers/cover1.png" alt="Album Cover" class="cover">
+      <h2 id="title">Morning Light</h2>
+      <h3 id="artist">Roa Music</h3>
+
+      <audio id="audio" src="songs/morning-light.mp3"></audio>
+
+      <div class="controls">
+        <button id="prev">⏮️</button>
+        <button id="play">▶️</button>
+        <button id="next">⏭️</button>
+      </div>
+
+      <input type="range" id="progress" value="0">
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
